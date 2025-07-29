@@ -7,8 +7,11 @@ import {
   CheckCircle, 
   Filter,
   HelpCircle,
-  Wrench
+  Wrench,
+  Settings
 } from 'lucide-react';
+
+import RoutineMaintenance from './components/RoutineMaintenance';
 
 interface Cause {
   id: string;
@@ -220,7 +223,10 @@ const initialIssues: Issue[] = [
   }
 ];
 
+type ViewMode = 'troubleshooting' | 'maintenance';
+
 function App() {
+  const [currentView, setCurrentView] = useState<ViewMode>('troubleshooting');
   const [issues, setIssues] = useState<Issue[]>(initialIssues);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -274,23 +280,57 @@ function App() {
               />
               <div className="border-l border-gray-600 pl-4 ml-4 hidden sm:block">
                 <h1 className="text-xl font-semibold">
-                  System Troubleshooting Assistant
+                  {currentView === 'troubleshooting' ? 'System Troubleshooting Assistant' : 'Routine Maintenance'}
                 </h1>
                 <p className="text-gray-300 text-sm">
-                  These are some of the most frequently asked questions and our responses
+                  {currentView === 'troubleshooting' 
+                    ? 'These are some of the most frequently asked questions and our responses' 
+                    : 'PureLab HE System Maintenance Procedures'
+                  }
                 </p>
               </div>
               <div className="sm:hidden">
                 <h1 className="text-lg font-semibold">
-                  Troubleshooting
+                  {currentView === 'troubleshooting' ? 'Troubleshooting' : 'Maintenance'}
                 </h1>
               </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <nav className="flex space-x-1 bg-gray-700 rounded-lg p-1 mobile-nav">
+                <button
+                  onClick={() => setCurrentView('troubleshooting')}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2 ${
+                    currentView === 'troubleshooting'
+                      ? 'bg-red-600 text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                  }`}
+                >
+                  <HelpCircle className="h-4 w-4" />
+                  <span className="hidden sm:inline">Troubleshooting</span>
+                  <span className="sm:hidden">Issues</span>
+                </button>
+                <button
+                  onClick={() => setCurrentView('maintenance')}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2 ${
+                    currentView === 'maintenance'
+                      ? 'bg-red-600 text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-600'
+                  }`}
+                >
+                  <Settings className="h-4 w-4" />
+                  <span className="hidden sm:inline">Routine Maintenance</span>
+                  <span className="sm:hidden">Maintenance</span>
+                </button>
+              </nav>
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mobile-main">
+      {currentView === 'maintenance' ? (
+        <RoutineMaintenance onNavigateBack={() => setCurrentView('troubleshooting')} />
+      ) : (
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mobile-main">
           <div className="mb-8 space-y-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
@@ -426,9 +466,41 @@ function App() {
             </div>
           )}
         </main>
+      )}
     </div>
   );
 };
+const ExpandableSubsection: React.FC<{
+  id: string;
+  title: string;
+  content: React.ReactNode;
+}> = ({ id, title, content }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border border-gray-200 rounded-md bg-white shadow-sm mobile-subsection">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center px-4 py-2 text-left hover:bg-gray-50 mobile-subsection-header"
+      >
+        <div className="flex items-center space-x-3">
+          <span className="text-sm font-medium text-gray-600">{id}</span>
+          <span className="text-sm text-gray-900 font-semibold">{title}</span>
+        </div>
+        {open ? (
+          <ChevronUp className="h-4 w-4 text-gray-500" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-gray-500" />
+        )}
+      </button>
+      {open && (
+        <div className="p-4 bg-gray-50 text-sm border-t border-gray-200 mobile-subsection-content">
+          {content}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default App;
 
