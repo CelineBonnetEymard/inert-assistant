@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Header optimizations */
+  .mobile-header {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  .mobile-header h1 {
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+  }
+  
+  .mobile-header p {
+    font-size: 0.75rem !important;
+    line-height: 1rem !important;
+  }
+  
+  .mobile-header img {
+    height: 2rem !important;
+  }
+  
+  .mobile-nav {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem !important;
+  }
+  
+  .mobile-nav button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Content area optimizations */
+  .mobile-main {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  /* Search and filter optimizations */
+  .mobile-search {
+    padding: 0.75rem 2.5rem 0.75rem 2.5rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .mobile-filter-container {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+  }
+  
+  .mobile-filter-select {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Card optimizations */
+  .mobile-card {
+    padding: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .mobile-card h3 {
+    font-size: 1.125rem !important;
+    line-height: 1.375rem !important;
+  }
+  
+  .mobile-card p {
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+  
+  .mobile-card-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+  
+  .mobile-card-content {
+    width: 100% !important;
+  }
+  
+  .mobile-card-actions {
+    align-self: flex-end !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  /* Cause/solution optimizations */
+  .mobile-cause {
+    padding: 0.75rem !important;
+  }
+  
+  .mobile-cause-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  
+  .mobile-cause-content {
+    width: 100% !important;
+  }
+  
+  .mobile-cause-actions {
+    align-self: flex-end !important;
+  }
+  
+  .mobile-solution {
+    padding: 0.75rem !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  .mobile-solution-media {
+    width: 100% !important;
+    height: 12rem !important;
+    max-width: none !important;
+  }
+  
+  /* Table of contents optimizations */
+  .mobile-toc {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  .mobile-toc-item {
+    padding: 0.75rem !important;
+  }
+  
+  .mobile-toc-item span {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Maintenance section optimizations */
+  .mobile-maintenance-section {
+    padding: 1rem !important;
+  }
+  
+  .mobile-maintenance-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+  
+  .mobile-maintenance-title {
+    font-size: 1.125rem !important;
+    line-height: 1.375rem !important;
+  }
+  
+  .mobile-maintenance-content {
+    padding: 1rem !important;
+  }
+  
+  /* Table optimizations */
+  .mobile-table-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .mobile-table {
+    min-width: 100% !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .mobile-table th,
+  .mobile-table td {
+    padding: 0.5rem 0.25rem !important;
+    white-space: nowrap !important;
+  }
+  
+  /* Modal optimizations */
+  .mobile-modal {
+    margin: 1rem !important;
+  }
+  
+  .mobile-modal iframe,
+  .mobile-modal img {
+    height: 50vh !important;
+    max-height: 50vh !important;
+  }
+  
+  /* Badge optimizations */
+  .mobile-badge {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+  
+  /* List optimizations */
+  .mobile-list {
+    font-size: 0.875rem !important;
+    line-height: 1.375rem !important;
+  }
+  
+  .mobile-list li {
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Subsection optimizations */
+  .mobile-subsection {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .mobile-subsection-header {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .mobile-subsection-content {
+    padding: 0.75rem !important;
+    font-size: 0.875rem !important;
+    line-height: 1.375rem !important;
+  }
+}
+
+/* Ensure no horizontal overflow */
+@media (max-width: 768px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  body {
+    overflow-x: hidden !important;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
