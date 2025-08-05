@@ -36,80 +36,45 @@ const initialIssues: Issue[] = [
     id: '1',
     title: 'No Working Gas Flow',
     category: 'Gas Supply System',
-    description: 'There is no working gas going into the PureLab HE',
+    description: 'Do you have adequate pressure and flow of working gas?',
     isExpanded: false,
     causes: [
       {
         id: '1-1',
-        question: 'Is the gas cylinder empty?',
+        question: ': Is the electrical signal getting to the gas (GA) valve?',
         action: 'If empty, replace the tank.',
         isExpanded: false,
         mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
-      },
-      {
-        id: '1-2',
-        question: 'Is the regulator open?',
-        action: 'If closed, open the regulator.',
-        isExpanded: false,
-        mediaUrl: 'https://www.youtube.com/embed/xRiBFTyM6bg',
-        mediaType: 'video'
-      },
-      {
-        id: '1-3',
-        question: 'Is the needle valve on the regulator open?',
-        action: 'If not, open the valve.',
-        isExpanded: false
-      },
-      {
-        id: '1-4',
-        question: 'What is the gas pressure?',
-        action: 'If the pressure is too high the valve w\'ont open. Pressure on a PureLab HE should be 55 psi.',
-        isExpanded: false
-      },
-      {
-        id: '1-5',
-        question: 'Is the electrical signal getting to the gas (GA) valve?',
-        action: 'The Valve will illuminate if it is receiving the proper voltage.',
-        isExpanded: false
-      }      
+      }     
     ]
   },
   {
     id: '2',
     title: 'No Regen Gas Flow',
     category: 'Gas Supply System',
-    description: 'NOTE : Regen gas will only flow after you have confirmed that the column valves are closed. After the regen starts the gas will no longer flow until the Purge stage of the regen begins.',
+    description: 'NOTE : Click here to view Regeneration procedure for a PureLab HE.',
     isExpanded: false,
     causes: [
       {
         id: '2-1',
-        question: 'If cylinder gas, is the tank empty? ',
-        action: 'Open the regeneration valve fully.',
-        isExpanded: false
+        question: 'Ensure you have adequate pressure and flow of Regeneration Gas. ',
+        action: 'Ensure your gas source has pressure and you’re providing 7-10 PSI (0.5 – 0.7 Bar) of gas pressure to the regeneration gas inlet.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       },
       {
         id: '2-2',
-        question: 'Is the regulator open?',
-        action: 'If closed, open the regulator.',
-        isExpanded: false
+        question: 'Are the Regeneration Gas (RG) and Exhaust (EX) valves receiving the electrical signal to open?',
+        action: 'The valves will illuminate when receiving the appropriate signal.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       },
       {
         id: '2-3',
-        question: 'Is the needle valve on the regulator open? ',
-        action: 'If not, open the valve.',
-        isExpanded: false
-      },
-      {
-        id: '2-4',
-        question: 'Are the RG and EX valves illuminated?',
-        action: '?',
-        isExpanded: false
-      },
-      {
-        id: '2-5',
-        question: 'Is the flow meter on the front of the purifier cart open?',
-        action: '?',
-        isExpanded: false
+        question: 'Is the flow meter on the front of the purifier open?',
+        action: 'Turn clockwise to open flow meter.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       }
     ]
   },
@@ -117,79 +82,77 @@ const initialIssues: Issue[] = [
     id: '3',
     title: 'Antechamber Won\'t Hold Vacuum',
     category: 'Vacuum System',
-    description: 'The antechamber is unable to maintain proper vacuum levels',
+    description: 'The antechamber is unable to maintain proper vacuum levels.',
     isExpanded: false,
     causes: [
       {
         id: '3-1',
-        question: 'Is the Antechamber door and O-rings clean?',
-        action: 'If not, clean them of debris. Replace the O-rings if necessary.',
-        isExpanded: false
+        question: 'Are the antechamber o-rings sealing properly?',
+        action: 'Ensure O-rings are clean and free of debris.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       },
       {
         id: '3-2',
         question: 'Is the refill valve closed?',
-        action: 'If not, close it.',
-        isExpanded: false
-      },
-      {
-        id: '3-3',
-        question: 'Are both doors closed?',
-        action: 'If not, close them.',
-        isExpanded: false
-      },
-      {
-        id: '3-4',
-        question: 'Are all fittings on the chamber tight?',
-        action: 'If not, tighten them.',
-        isExpanded: false
+        action: 'If not, close it. Your system may be equipped with an auto-refill valve or manual. The auto valve will be illuminated when open.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       }
     ]
   },
   {
     id: '4',
-    title: 'Box is leaking',
+    title: 'Glovebox is leaking',
     category: 'Glovebox Integrity',
     description: ' ',
     isExpanded: false,
     causes: [
       {
         id: '4-1',
-        question: 'Have any fittings been modified?',
-        action: 'If not, the leak is most likely in the gloves. Inspect the gloves closely for leaks. Replace gloves as required.',
-        isExpanded: false
+        question: 'Unknown cause.',
+        action: 'Refer to the pressure test section of the PureLab HE manual. Perform a pressure test and record the result of the leakage rate. Take the steps below to find possible sources of the leak. Retest and record the result, noting improvements in the leak rate.',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       },
       {
         id: '4-2',
-        question: 'Are all Antechambers under static vacuum and not leaking?',
-        action: 'If not, verify and correct.',
+        question: 'Have any modifications been performed to the glovebox?',
+        action: 'Ensure all modifications are leak tight. Use liquid leak detector (soapy water) to test connections.',
         isExpanded: false
       },
       {
         id: '4-3',
-        question: 'Have you referred to the pressure test section of the manual?',
-        action: 'If not, refer to it and record the rate of leakage.',
+        question: 'Leaking through antechamber.',
+        action: 'Place antechambers under vacuum.',
+        isExpanded: false
+      },
+      {
+        id: '4-4',
+        question: 'Leaking through gloves.',
+        action: 'Carefully inspect gloves for damage. If damaged, order replacement gloves from Inert.',
         isExpanded: false
       }
     ]
   },
   {
     id: '5',
-    title: 'Vacuum pump is making noise or has reduced performance.',
+    title: 'Vacuum pump is making noise or has reduced performance',
     category: 'Vacuum System',
     description: ' ',
     isExpanded: false,
     causes: [
       {
         id: '5-1',
-        question: 'Does the pump oil look bad?',
-        action: 'If so, change the pump oil.',
-        isExpanded: false
+        question: 'Vacuum pump requires service.',
+        action: 'If oil looks black and opaque, change oil. ',
+        isExpanded: false,
+        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       },
       {
         id: '5-2',
-        question: 'Are all fittings connected to the vacuum pump tight?',
-        action: 'If not, tighten them.',
+        question: 'Leaking through a fitting.',
+        action: 'Check all fittings on vacuum lines for tightness.',
         isExpanded: false
       },
       {
@@ -202,20 +165,14 @@ const initialIssues: Issue[] = [
   },
   {
     id: '6',
-    title: 'The window is "cloudy" or scratched.',
+    title: 'The window is "cloudy" or scratched',
     category: 'Maintenance',
-    description: 'Control panel buttons and display are not responding',
+    description: 'Control panel buttons and display are not responding>',
     isExpanded: false,
     causes: [
       {
         id: '6-1',
-        question: 'How should I clean a cloudy or scratched safety glass window?',
-        action: 'Safety glass can be washed with alcohol. However, scratches—especially on the inside—are not easily repaired. A professional from a glass company may be able to repair scratches that are on the outside of the glass.',
-        isExpanded: false
-      },
-      {
-        id: '6-2',
-        question: 'How do I clean or polish a Lexan window if it\'s cloudy or scratched?',
+        question: 'Lexan window needs cleaning.',
         action: 'Lexan can be gently washed using mild soap or detergent with a soft cloth. You may also use organic solvents such as aliphatic hydrocarbons, kerosene, or naphtha. To remove light scratches, try using automotive wax.',
         isExpanded: false
       }
@@ -223,10 +180,7 @@ const initialIssues: Issue[] = [
   }
 ];
 
-type ViewMode = 'troubleshooting' | 'maintenance';
-
 function App() {
-  const [currentView, setCurrentView] = useState<ViewMode>('troubleshooting');
   const [issues, setIssues] = useState<Issue[]>(initialIssues);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -280,57 +234,23 @@ function App() {
               />
               <div className="border-l border-gray-600 pl-4 ml-4 hidden sm:block">
                 <h1 className="text-xl font-semibold">
-                  {currentView === 'troubleshooting' ? 'System Troubleshooting Assistant' : 'Routine Maintenance'}
+                  System Troubleshooting Assistant
                 </h1>
                 <p className="text-gray-300 text-sm">
-                  {currentView === 'troubleshooting' 
-                    ? 'These are some of the most frequently asked questions and our responses' 
-                    : 'PureLab HE System Maintenance Procedures'
-                  }
+                  These are some of the most frequently asked questions and our responses
                 </p>
               </div>
               <div className="sm:hidden">
                 <h1 className="text-lg font-semibold">
-                  {currentView === 'troubleshooting' ? 'Troubleshooting' : 'Maintenance'}
+                  Troubleshooting
                 </h1>
               </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <nav className="flex space-x-1 bg-gray-700 rounded-lg p-1 mobile-nav">
-                <button
-                  onClick={() => setCurrentView('troubleshooting')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2 ${
-                    currentView === 'troubleshooting'
-                      ? 'bg-red-600 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-600'
-                  }`}
-                >
-                  <HelpCircle className="h-4 w-4" />
-                  <span className="hidden sm:inline">Troubleshooting</span>
-                  <span className="sm:hidden">Issues</span>
-                </button>
-                <button
-                  onClick={() => setCurrentView('maintenance')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-2 ${
-                    currentView === 'maintenance'
-                      ? 'bg-red-600 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-600'
-                  }`}
-                >
-                  <Settings className="h-4 w-4" />
-                  <span className="hidden sm:inline">Routine Maintenance</span>
-                  <span className="sm:hidden">Maintenance</span>
-                </button>
-              </nav>
             </div>
           </div>
         </div>
       </header>
 
-      {currentView === 'maintenance' ? (
-        <RoutineMaintenance onNavigateBack={() => setCurrentView('troubleshooting')} />
-      ) : (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mobile-main">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mobile-main">
           <div className="mb-8 space-y-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
@@ -466,42 +386,9 @@ function App() {
             </div>
           )}
         </main>
-      )}
     </div>
   );
 };
-const ExpandableSubsection: React.FC<{
-  id: string;
-  title: string;
-  content: React.ReactNode;
-}> = ({ id, title, content }) => {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border border-gray-200 rounded-md bg-white shadow-sm mobile-subsection">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center px-4 py-2 text-left hover:bg-gray-50 mobile-subsection-header"
-      >
-        <div className="flex items-center space-x-3">
-          <span className="text-sm font-medium text-gray-600">{id}</span>
-          <span className="text-sm text-gray-900 font-semibold">{title}</span>
-        </div>
-        {open ? (
-          <ChevronUp className="h-4 w-4 text-gray-500" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-gray-500" />
-        )}
-      </button>
-      {open && (
-        <div className="p-4 bg-gray-50 text-sm border-t border-gray-200 mobile-subsection-content">
-          {content}
-        </div>
-      )}
-    </div>
-  );
-}
 
 export default App;
-
 
