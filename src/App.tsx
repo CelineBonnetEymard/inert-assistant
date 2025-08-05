@@ -123,7 +123,7 @@ const initialIssues: Issue[] = [
         question: 'Leaking through antechamber.',
         action: 'Place antechambers under vacuum.',
         isExpanded: false
-      }
+      },
       {
         id: '4-4',
         question: 'Leaking through gloves.',
