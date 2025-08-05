@@ -31,7 +31,7 @@ interface Issue {
 const initialIssues: Issue[] = [
   {
     id: '1',
-    title: 'No Working Gas Flow.',
+    title: 'No Working Gas Flow',
     category: 'Gas Supply System',
     description: 'Do you have adequate pressure and flow of working gas?',
     isExpanded: false,
@@ -47,7 +47,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '2',
-    title: 'No Regen Gas Flow.',
+    title: 'No Regen Gas Flow',
     category: 'Gas Supply System',
     description: 'NOTE : Click here to view Regeneration procedure for a PureLab HE.',
     isExpanded: false,
@@ -77,7 +77,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '3',
-    title: 'Antechamber Won\'t Hold Vacuum.',
+    title: 'Antechamber Won\'t Hold Vacuum',
     category: 'Vacuum System',
     description: 'The antechamber is unable to maintain proper vacuum levels.',
     isExpanded: false,
@@ -100,7 +100,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '4',
-    title: 'Glovebox is leaking.',
+    title: 'Glovebox is leaking',
     category: 'Glovebox Integrity',
     description: ' ',
     isExpanded: false,
@@ -134,7 +134,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '5',
-    title: 'Vacuum pump is making noise or has reduced performance.',
+    title: 'Vacuum pump is making noise or has reduced performance',
     category: 'Vacuum System',
     description: ' ',
     isExpanded: false,
@@ -162,7 +162,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '6',
-    title: 'The window is "cloudy" or scratched.',
+    title: 'The window is "cloudy" or scratched',
     category: 'Maintenance',
     description: 'Control panel buttons and display are not responding>',
     isExpanded: false,
