@@ -31,7 +31,7 @@ interface Issue {
 const initialIssues: Issue[] = [
   {
     id: '1',
-    title: 'No Working Gas Flow',
+    title: 'No Working Gas Flow.',
     category: 'Gas Supply System',
     description: 'Do you have adequate pressure and flow of working gas?',
     isExpanded: false,
@@ -47,7 +47,7 @@ const initialIssues: Issue[] = [
   },
   {
     id: '2',
-    title: 'No Regen Gas Flow',
+    title: 'No Regen Gas Flow.',
     category: 'Gas Supply System',
     description: 'NOTE : Click here to view Regeneration procedure for a PureLab HE.',
     isExpanded: false,
@@ -77,9 +77,9 @@ const initialIssues: Issue[] = [
   },
   {
     id: '3',
-    title: 'Antechamber Won\'t Hold Vacuum',
+    title: 'Antechamber Won\'t Hold Vacuum.',
     category: 'Vacuum System',
-    description: 'The antechamber is unable to maintain proper vacuum levels',
+    description: 'The antechamber is unable to maintain proper vacuum levels.',
     isExpanded: false,
     causes: [
       {
@@ -100,14 +100,14 @@ const initialIssues: Issue[] = [
   },
   {
     id: '4',
-    title: 'Glovebox is leaking',
+    title: 'Glovebox is leaking.',
     category: 'Glovebox Integrity',
     description: ' ',
     isExpanded: false,
     causes: [
       {
         id: '4-1',
-        question: 'Unknown cause',
+        question: 'Unknown cause.',
         action: 'Refer to the pressure test section of the PureLab HE manual. Perform a pressure test and record the result of the leakage rate. Take the steps below to find possible sources of the leak. Retest and record the result, noting improvements in the leak rate.',
         isExpanded: false,
         mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
@@ -164,12 +164,12 @@ const initialIssues: Issue[] = [
     id: '6',
     title: 'The window is "cloudy" or scratched.',
     category: 'Maintenance',
-    description: 'Control panel buttons and display are not responding',
+    description: 'Control panel buttons and display are not responding>',
     isExpanded: false,
     causes: [
       {
         id: '6-1',
-        question: 'Lexan window needs cleaning',
+        question: 'Lexan window needs cleaning.',
         action: 'Lexan can be gently washed using mild soap or detergent with a soft cloth. You may also use organic solvents such as aliphatic hydrocarbons, kerosene, or naphtha. To remove light scratches, try using automotive wax.',
         isExpanded: false
       }
