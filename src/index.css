@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+html, body {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
 /* Mobile-specific optimizations */
 @media (max-width: 768px) {
   /* Header optimizations */
