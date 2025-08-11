@@ -41,14 +41,14 @@ const initialIssues: Issue[] = [
         question: 'Do you have adequate pressure and flow of working gas?',
         action: 'Ensure your gas source has pressure and you’re suppling 55-60 PSI (3.8 – 4.1 Bar) of pressure to the purifier.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/1%20-%20Regulator%20on%20a%20gas%20cylinder.png'
       }, 
       {
         id: '1-2',
         question: 'Is the electrical signal getting to the gas (GA) valve?',
         action: 'The Valve will illuminate if it is receiving the proper voltage.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/2%20-%20Valve%20block%20with%20GA%20valve%20illuminated.png'
       }     
     ]
   },
@@ -60,7 +60,7 @@ const initialIssues: Issue[] = [
       <span>
         NOTE:{" "}
         <a
-          href="/public/PureLabHE_Manual 0.6.pdf"
+          href="/PureLabHE_Manual 0.6.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 underline hover:text-blue-800"
@@ -76,21 +76,21 @@ const initialIssues: Issue[] = [
         question: 'Ensure you have adequate pressure and flow of Regeneration Gas. ',
         action: 'Ensure your gas source has pressure and you’re providing 7-10 PSI (0.5 – 0.7 Bar) of gas pressure to the regeneration gas inlet.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/1%20-%20Regulator%20on%20a%20gas%20cylinder.png'
       },
       {
         id: '2-2',
         question: 'Are the Regeneration Gas (RG) and Exhaust (EX) valves receiving the electrical signal to open?',
         action: 'The valves will illuminate when receiving the appropriate signal.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/3%20-%20Valve%20block%20with%20RG%20and%20EX%20valve%20illuminated.png'
       },
       {
         id: '2-3',
         question: 'Is the flow meter on the front of the purifier open?',
         action: 'Turn clockwise to open flow meter.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/4%20-%20Flow%20meter%20on%20purifier.png'
       }
     ]
   },
@@ -106,14 +106,14 @@ const initialIssues: Issue[] = [
         question: 'Are the antechamber o-rings sealing properly?',
         action: 'Ensure O-rings are clean and free of debris.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/5%20-%20Antechamber%20O-ring.png'
       },
       {
         id: '3-2',
         question: 'Is the refill valve closed?',
         action: 'If not, close it. Your system may be equipped with an auto-refill valve or manual. The auto valve will be illuminated when open.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/6%20-%20Auto%20and%20manual%20refill%20valves.png'
       }
     ]
   },
@@ -129,7 +129,7 @@ const initialIssues: Issue[] = [
         question: 'Unknown cause.',
         action: 'Refer to the pressure test section of the PureLab HE manual. Perform a pressure test and record the result of the leakage rate. Take the steps below to find possible sources of the leak. Retest and record the result, noting improvements in the leak rate.',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/7%20-%20HMI%20pressure%20test%20screen.png'
       },
       {
         id: '4-2',
@@ -163,7 +163,7 @@ const initialIssues: Issue[] = [
         question: 'Vacuum pump requires service.',
         action: 'If oil looks black and opaque, change oil. ',
         isExpanded: false,
-        mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
+        mediaUrl: '/8%20-%20Fresh%20oil%20&%20not%20fresh%20oil.png'
       },
       {
         id: '5-2',
