@@ -60,7 +60,7 @@ const initialIssues: Issue[] = [
       <span>
         NOTE:{" "}
         <a
-          href="/PureLabHE_Manual 0.6.pdf"
+          href="/INERT%20Regeneration%20Procedure.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 underline hover:text-blue-800"
