@@ -38,14 +38,14 @@ const initialIssues: Issue[] = [
     causes: [
       {
         id: '1-1',
-        question: ': Do you have adequate pressure and flow of working gas?',
+        question: 'Do you have adequate pressure and flow of working gas?',
         action: 'Ensure your gas source has pressure and you’re suppling 55-60 PSI (3.8 – 4.1 Bar) of pressure to the purifier.',
         isExpanded: false,
         mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
       }, 
       {
         id: '1-2',
-        question: ': Is the electrical signal getting to the gas (GA) valve?',
+        question: 'Is the electrical signal getting to the gas (GA) valve?',
         action: 'The Valve will illuminate if it is receiving the proper voltage.',
         isExpanded: false,
         mediaUrl: 'https://www.inertcorp.com/wp-content/uploads/2024/05/purelab-4gb-copy-2-1-1-1.png'
