@@ -172,7 +172,7 @@ const initialIssues: Issue[] = [
         isExpanded: false
       },
       {
-        id: '5-3"',
+        id: '5-3',
         question: 'What should I do if changing the pump oil and checking the upstream fittings doesn\'t improve vacuum pump performance?',
         action: 'If there is no improvement after changing the pump oil and checking the fittings upstream from the pump, put a vacuum gauge directly on the inlet of the pump. Refer to the pump manual for the obtainable vacuum level. If the pump cannot achieve the specified vacuum, the pump must be repaired or replaced.',
         isExpanded: false
@@ -357,7 +357,7 @@ function App() {
                                   <img
                                     src={cause.mediaUrl}
                                     alt="Solution illustration"
-                                    className="w-full h-full object-cover rounded"
+                                    className="w-full h-full object-contain rounded bg-white p-1"
                                   />
                                 )}
                               </div>
