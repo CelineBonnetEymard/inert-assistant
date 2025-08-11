@@ -56,7 +56,19 @@ const initialIssues: Issue[] = [
     id: '2',
     title: 'No Regeneration Gas Flow',
     category: 'Gas Supply System',
-    description: 'NOTE : Click here to view Regeneration procedure for a PureLab HE.',
+    description: (
+      <span>
+        NOTE:{" "}
+        <a
+          href="/PureLabHE_Manual%200.6.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline hover:text-blue-800"
+        >
+          Click here to view Regeneration procedure for a PureLab HE
+        </a>
+      </span>
+    ),
     isExpanded: false,
     causes: [
       {
