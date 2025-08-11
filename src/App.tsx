@@ -341,7 +341,7 @@ function App() {
                               <span className="text-gray-700">{cause.action}</span>
                             </div>
                             {cause.mediaUrl && (
-                              <div className="w-40 h-24 flex-shrink-0 cursor-pointer mobile-solution-media" onClick={() => {
+                              <div className="w-56 h-36 sm:w-64 sm:h-44 flex-shrink-0 cursor-pointer mobile-solution-media" onClick={() => {
                                 setModalMediaUrl(cause.mediaUrl!);
                                 setModalMediaType(cause.mediaType || 'image');
                               }}>
@@ -395,7 +395,7 @@ function App() {
                   <img
                     src={modalMediaUrl}
                     alt="Zoomed media"
-                    className="w-full max-h-[80vh] object-contain rounded-lg"
+                    className="max-w-[90%] max-h-[70vh] mx-auto object-contain rounded-lg border-4 border-black bg-white p-2"
                   />
                 )}
               </div>
