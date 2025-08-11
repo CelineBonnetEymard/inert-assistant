@@ -6,3 +6,9 @@ export default {
   },
   plugins: [],
 };
+
+extend: {
+  fontFamily: {
+    sans: ['Source Sans 3', 'sans-serif'],
+  },
+}
