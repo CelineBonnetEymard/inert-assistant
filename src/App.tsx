@@ -341,7 +341,7 @@ function App() {
                               <span className="text-gray-700">{cause.action}</span>
                             </div>
                             {cause.mediaUrl && (
-                              <div className="w-56 h-36 sm:w-64 sm:h-44 flex-shrink-0 cursor-pointer mobile-solution-media" onClick={() => {
+                              <div className="w-56 h-36 sm:w-64 sm:h-44 flex-shrink-0 cursor-pointer mobile-solution-media bg-green-50" onClick={() => {
                                 setModalMediaUrl(cause.mediaUrl!);
                                 setModalMediaType(cause.mediaType || 'image');
                               }}>
@@ -357,7 +357,7 @@ function App() {
                                   <img
                                     src={cause.mediaUrl}
                                     alt="Solution illustration"
-                                    className="w-full h-full object-contain rounded bg-white p-1"
+                                    className="w-full h-full object-contain rounded"
                                   />
                                 )}
                               </div>
