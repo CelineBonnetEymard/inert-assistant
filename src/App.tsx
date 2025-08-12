@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, type ReactNode } from 'react';
 import { 
   Search, 
   ChevronDown, 
@@ -7,7 +7,6 @@ import {
   CheckCircle, 
   Filter,
   HelpCircle,
-  Wrench
 } from 'lucide-react';
 
 interface Cause {
@@ -23,7 +22,7 @@ interface Issue {
   id: string;
   title: string;
   category: string;
-  description: string;
+  description: string | ReactNode;
   causes: Cause[];
   isExpanded: boolean;
 }
@@ -206,13 +205,23 @@ function App() {
   const categories = ['All', ...Array.from(new Set(initialIssues.map(issue => issue.category)))];
 
   const filteredIssues = issues.filter(issue => {
-    const matchesSearch = issue.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         issue.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         issue.causes.some(cause => 
-                           cause.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           cause.action.toLowerCase().includes(searchTerm.toLowerCase())
-                         );
-    const matchesCategory = selectedCategory === 'All' || issue.category === selectedCategory;
+    const q = searchTerm.toLowerCase();
+    const desc =
+      typeof issue.description === 'string'
+        ? issue.description.toLowerCase()
+        : '';
+
+    const matchesSearch =
+      issue.title.toLowerCase().includes(q) ||
+      desc.includes(q) ||
+      issue.causes.some(cause =>
+        cause.question.toLowerCase().includes(q) ||
+        cause.action.toLowerCase().includes(q)
+      );
+
+    const matchesCategory =
+      selectedCategory === 'All' || issue.category === selectedCategory;
+
     return matchesSearch && matchesCategory;
   });
 
