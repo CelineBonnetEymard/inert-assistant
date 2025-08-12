@@ -363,13 +363,11 @@ function App() {
                                     allowFullScreen
                                   />
                                 ) : (
-                                  <div className="bg-[rgba(148,198,154,0.2)] p-2 rounded">
-                                    <img
-                                      src={cause.mediaUrl}
-                                      alt="Solution illustration"
-                                      className="w-full h-full object-contain rounded"
-                                    />
-                                  </div>
+                                  <img
+                                    src={cause.mediaUrl}
+                                    alt="Solution illustration"
+                                    className="w-full h-full object-contain rounded"
+                                  />
                                 )}
                               </div>
                             )}
