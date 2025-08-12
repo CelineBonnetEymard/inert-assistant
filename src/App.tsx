@@ -62,7 +62,7 @@ const initialIssues: Issue[] = [
           href="/INERT%20Regeneration%20Procedure.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 underline hover:text-blue-800"
+          className="text-[#74b1c1] underline hover:text-blue-800"
         >
           Click here to view Regeneration procedure for a PureLab HE
         </a>
@@ -248,7 +248,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <header className="bg-gray-800 text-white shadow-lg sticky top-0 z-50">
+      <header className="bg-[#1d1d1c] text-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mobile-header">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -278,22 +278,22 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mobile-main">
           <div className="mb-8 space-y-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#8c857b] h-5 w-5" />
               <input
                 type="text"
                 placeholder="Search issues, causes, or solutions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 bg-white shadow-sm mobile-search"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#74b1c1] focus:border-[#74b1c1] bg-white shadow-sm mobile-search"
               />
             </div>
 
             <div className="flex items-center space-x-4 mobile-filter-container">
-              <Filter className="h-5 w-5 text-gray-600" />
+              <Filter className="h-5 w-5 text-[#8c857b]" />
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 bg-white shadow-sm font-medium mobile-filter-select"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#74b1c1] focus:border-[#74b1c1] bg-white shadow-sm font-medium mobile-filter-select"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -309,16 +309,16 @@ function App() {
                   <div className="flex items-center justify-between mobile-card-header">
                     <div className="flex-1 mobile-card-content">
                       <div className="flex items-center space-x-3 mb-2 flex-wrap">
-                        <AlertCircle className="h-6 w-6 text-red-500" />
+                        <AlertCircle className="h-6 w-6 text-[#db4236]" />
                         <h3 className="text-xl font-semibold text-gray-900">{issue.title}</h3>
                         <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full border mobile-badge">
                           {issue.category}
                         </span>
                       </div>
-                      <p className="text-gray-600 leading-relaxed">{issue.description}</p>
+                      <p className="text-[#8c857b] leading-relaxed">{issue.description}</p>
                     </div>
                     <div className="ml-4 mobile-card-actions">
-                      {issue.isExpanded ? <ChevronUp className="h-6 w-6 text-gray-500" /> : <ChevronDown className="h-6 w-6 text-gray-500" />}
+                      {issue.isExpanded ? <ChevronUp className="h-6 w-6 text-[#8c857b]" /> : <ChevronDown className="h-6 w-6 text-[#8c857b]" />}
                     </div>
                   </div>
                 </div>
@@ -330,21 +330,21 @@ function App() {
                         <div className="p-4 cursor-pointer hover:bg-gray-50 mobile-cause" onClick={() => toggleCause(issue.id, cause.id)}>
                           <div className="flex justify-between items-center mobile-cause-header">
                             <div className="flex items-start space-x-3 mobile-cause-content">
-                              <HelpCircle className="h-5 w-5 text-gray-500 mt-0.5" />
+                              <HelpCircle className="h-5 w-5 text-[#8c857b] mt-0.5" />
                               <div>
                                 <span className="font-semibold text-gray-900">Cause: </span>
                                 <span className="text-gray-700">{cause.question}</span>
                               </div>
                             </div>
                             <div className="mobile-cause-actions">
-                              {cause.isExpanded ? <ChevronUp className="h-5 w-5 text-gray-500" /> : <ChevronDown className="h-5 w-5 text-gray-500" />}
+                              {cause.isExpanded ? <ChevronUp className="h-5 w-5 text-[#8c857b]" /> : <ChevronDown className="h-5 w-5 text-[#8c857b]" />}
                             </div>
                           </div>
                         </div>
 
                         {cause.isExpanded && (
-                          <div className="border-t border-gray-100 bg-green-50 p-4 flex space-x-4 items-start mobile-solution">
-                            <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
+                          <div className="border-t border-gray-100 bg-[rgba(148,198,154,0.2)] p-4 flex space-x-4 items-start mobile-solution">
+                            <CheckCircle className="h-5 w-5 text-[#94c69a] mt-0.5" />
                             <div className="flex-1">
                               <span className="font-semibold text-gray-900">Solution: </span>
                               <span className="text-gray-700">{cause.action}</span>
@@ -363,11 +363,13 @@ function App() {
                                     allowFullScreen
                                   />
                                 ) : (
-                                  <img
-                                    src={cause.mediaUrl}
-                                    alt="Solution illustration"
-                                    className="w-full h-full object-contain rounded"
-                                  />
+                                  <div className="bg-[rgba(148,198,154,0.2)] p-2 rounded">
+                                    <img
+                                      src={cause.mediaUrl}
+                                      alt="Solution illustration"
+                                      className="w-full h-full object-contain rounded"
+                                    />
+                                  </div>
                                 )}
                               </div>
                             )}
