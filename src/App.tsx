@@ -182,7 +182,7 @@ const initialIssues: Issue[] = [
     id: '6',
     title: 'The window is "cloudy" or scratched',
     category: 'Maintenance',
-    description: description: ' ',
+    description: ' ',
     isExpanded: false,
     causes: [
       {
