@@ -59,7 +59,7 @@ const initialIssues: Issue[] = [
       <span>
         NOTE:{" "}
         <a
-          href="/INSTRUCTIONS_for_COLUMN_REGENERATION_rev1_47.pdf"
+          href="/INSTRUCTIONS_for_COLUMN_REGENERATION.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#74b1c1] underline hover:text-blue-800"
